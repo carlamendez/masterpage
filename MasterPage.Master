@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%">
+                <tr>
+                    <td class="page-header text-center label-primary" style="color: white; font-family: Calibri; font-size: 40px">
+                        <asp:Label Text="Usuarios" runat="server" /><br />
+                        <asp:Label Style="font-family: Calibri; font-size: 25px" ID="lblusuario" Text="Usuario :" runat="server" />
+                        <asp:Label Style="font-family: Calibri; font-size: 25px" ID="lblnombre" Text="" runat="server" /><br />
+                        <asp:Label Style="font-family: Calibri; font-size: 25px" ID="lblEdad" Text="Edad :" runat="server" />
+                        <asp:Label Style="font-family: Calibri; font-size: 25px" ID="lbledadu" Text="" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="dropdown-menu-left">
+                        <asp:LinkButton CssClass="text-center" Text="Editar datos personales" runat="server" style="margin-left:20px;margin-right:20px" OnClick="Unnamed_Click"></asp:LinkButton>
+                        <asp:LinkButton Text="Cerrar Sesión" ID="lnkcerrarsesion" runat="server" style="margin-left:20px;margin-right:20px" OnClick="lnkcerrarsesion_Click"/>
+                         <asp:LinkButton Text="Cambiar Contraseña" ID="lnkcambiarpass" runat="server"/>
+                    </td>
+                </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="cambiocontenido" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
